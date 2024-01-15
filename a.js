@@ -7,14 +7,14 @@ import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
 
 class Car{
-    constructor(n,t,c,f,y,i,i2){
-        this.name = n
-        this.type = t
-        this.color = c
-        this.fuel = f
-        this.year = y
-        this.img = "https://axmjqhyyjpat.objectstorage.eu-amsterdam-1.oci.customer-oci.com/n/axmjqhyyjpat/b/randomimages/o/cars%2F" + i +  ".png"
-        this.price = i2
+    constructor(name,type,color,fuel,year,img,price){
+        this.name = name
+        this.type = type
+        this.color = color
+        this.fuel = fuel
+        this.year = year
+        this.img = "https://axmjqhyyjpat.objectstorage.eu-amsterdam-1.oci.customer-oci.com/n/axmjqhyyjpat/b/randomimages/o/cars%2F" + img +  ".png"
+        this.price = price
     }
 }
 
