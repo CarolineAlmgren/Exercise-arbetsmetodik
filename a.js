@@ -21,14 +21,14 @@ class Car{
 var cars = []
 //Generate 20 cars 
 for(var i = 0; i < 10;i++){
-    var n = faker.vehicle.vehicle()
-    var t = faker.vehicle.type()
-    var c = faker.vehicle.color()
-    var f = faker.vehicle.fuel()
-    var y = faker.number.int({min:1970, max:2023})
-    var i2 = faker.number.int({min:1, max:100})
-    var i3 = faker.number.int({min:30, max:200}) * 1000
-    cars.push(new Car(n,t,c,f,y,i2,i3))
+    var name = faker.vehicle.vehicle()
+    var type = faker.vehicle.type()
+    var color = faker.vehicle.color()
+    var fuel = faker.vehicle.fuel()
+    var year = faker.number.int({min:1970, max:2023})
+    var img = faker.number.int({min:1, max:100})
+    var price = faker.number.int({min:30, max:200}) * 1000
+    cars.push(new Car(name,type,color,fuel,year,img,price))
 }
 
 function r(){
