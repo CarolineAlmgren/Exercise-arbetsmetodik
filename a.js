@@ -1,9 +1,5 @@
 import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
 
-//TODO
-// enhance code
-//fixa så att det blir 108 000 kr istf 108000 kr
-
 class Car {
   constructor(name, year, img, price) {
     this.name = name;
@@ -28,12 +24,14 @@ function generateCarCards(car) {
     <div class="information">
         <div class="name">${car.name}</div>
         <div class="description">${car.year}</div>
-        <a class="ctabutton" href="#">${car.price} kr</a>
+        <a class="ctabutton" href="#">${car.price.toLocaleString('sv-SE')} kr</a>
         </div>
     </div>`;
 }
+
 const productGallery = document.getElementsByClassName('productgallery')[0];
 for (let productIndex = 0; productIndex < cars.length; productIndex++) {
   const productCard = generateCarCards(cars[productIndex]);
   productGallery.innerHTML += productCard;
+  
 }
